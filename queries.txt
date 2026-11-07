@@ -1,0 +1,17 @@
+# 自动发现用的 GitHub 仓库搜索，每行一条（会自动加上"最近 3 天有推送"的限制，每条翻 2 页）。
+# 支持关键词，也支持 topic:xxx。删掉这个文件则使用内置默认值。
+# 搜索接口每分钟 30 次，行数太多会被限流（程序会自动提前结束搜索，不影响输出）。
+clash free nodes
+free v2ray subscription
+free proxy nodes aggregator
+vmess vless trojan free nodes
+clash 订阅 免费节点
+免费节点 每日更新
+topic:v2ray
+topic:clash
+topic:vless
+topic:hysteria2
+topic:xray
+topic:sing-box
+topic:shadowsocks
+topic:free-nodes

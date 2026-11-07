@@ -1,0 +1,57 @@
+name: update-nodes
+
+on:
+  schedule:
+    - cron: "7 * * * *"      # 每小时第 7 分钟（GitHub 定时任务可能延迟几分钟到十几分钟）
+  workflow_dispatch:          # 也可以手动点 Run workflow
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-nodes
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Install mihomo
+        run: |
+          TAG=$(curl -sIL -o /dev/null -w '%{url_effective}' https://github.com/MetaCubeX/mihomo/releases/latest | sed 's#.*/##')
+          curl -fsSL -o mihomo.gz "https://github.com/MetaCubeX/mihomo/releases/download/${TAG}/mihomo-linux-amd64-compatible-${TAG}.gz"
+          gunzip mihomo.gz && chmod +x mihomo && ./mihomo -v
+
+      # 保存"哪些来源最近有有效节点"，下一轮优先抓、连续失效的自动淘汰
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: sources-${{ github.run_id }}
+          restore-keys: sources-
+
+      - name: Run pipeline
+        env:
+          GITHUB_TOKEN: ${{ github.token }}               # 自动发现要用 GitHub 搜索 API
+          EXTRA_SOURCES: ${{ secrets.EXTRA_SOURCES }}     # 可选：固定来源
+        run: python main.py
+
+      # 结果推到独立的 nodes 分支（每次强制覆盖，不会让主分支历史越堆越大）
+      - name: Publish to nodes branch
+        run: |
+          cd output
+          git init -q -b nodes
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "update $(date -u +%FT%TZ)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" nodes
