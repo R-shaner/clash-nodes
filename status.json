@@ -1,0 +1,22 @@
+{
+  "updated": "2026-11-14 17:04 UTC",
+  "sources": 403,
+  "sources_with_nodes": 234,
+  "sources_alive": 124,
+  "parsed": 249395,
+  "after_dedupe": 1500,
+  "delay_ok": 25,
+  "final": 15,
+  "countries": {
+    "US": 6,
+    "TR": 1,
+    "NL": 2,
+    "CH": 1,
+    "DE": 1,
+    "FR": 1,
+    "ZA": 1,
+    "KR": 1,
+    "SG": 1
+  },
+  "seconds": 187
+}

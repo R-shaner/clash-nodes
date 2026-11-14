@@ -1,0 +1,313 @@
+# updated: 2026-11-14 17:04 UTC
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+unified-delay: true
+tcp-concurrent: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - '*.lan'
+  - +.local
+  - +.msftconnecttest.com
+  - +.msftncsi.com
+  - localhost.ptlogin2.qq.com
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  proxy-server-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  nameserver:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  fallback:
+  - https://1.1.1.1/dns-query#🚀 节点选择
+  - https://8.8.8.8/dns-query#🚀 节点选择
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+    - 240.0.0.0/4
+proxies:
+- name: 🇺🇸 US-01 31.4MB/s
+  type: ss
+  server: 167.88.63.39
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 🇺🇸 US-02 27.5MB/s
+  type: vmess
+  server: 172.111.38.246
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: true
+- name: 🇹🇷 TR-01 24.0MB/s
+  type: hysteria2
+  server: 153.56.210.134
+  port: 57251
+  password: ff0343ad-1c9f-4986-8c62-c01935b508ca
+  sni: www.bing.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: 0ee2089e-70df-4c30-bfea-1fb9be61d93e
+- name: 🇺🇸 US-03 21.0MB/s
+  type: vless
+  server: 198.44.36.36
+  port: 443
+  udp: true
+  uuid: da7863a0-5858-4322-840e-0474e423bede
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: _0A8M6IEGN2T61KyqQOgiLlDu-dVcp0TFUyfukK5YhI
+    short-id: 55a7e6ff3ccf94c9
+  client-fingerprint: firefox
+- name: 🇺🇸 US-04 19.9MB/s
+  type: trojan
+  server: 167.88.61.193
+  port: 443
+  udp: true
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: browseseniorrolesandenhanceyourcareertoday.com
+  client-fingerprint: chrome
+- name: 🇳🇱 NL-01 11.6MB/s
+  type: vless
+  server: 51.158.206.87
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  client-fingerprint: chrome
+- cipher: aes-256-gcm
+  name: 🇨🇭 CH-01 10.6MB/s
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 23.166.88.127
+  type: ss
+- type: vless
+  name: 🇳🇱 NL-02 10.4MB/s
+  server: 51.158.206.19
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  udp: true
+  tls: true
+  servername: fuck.rkn
+  sni: fuck.rkn
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+- name: 🇩🇪 DE-01 9.4MB/s
+  type: ss
+  server: 185.226.172.8
+  port: 8008
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
+  udp: true
+- name: 🇫🇷 FR-01 8.9MB/s
+  type: hysteria2
+  server: 51.77.217.70
+  port: 8447
+  password: capadmbd5f18bd:jX4BuciLLIqLvzJZsHpoXtc2
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: ChY5QQQT3ZtUdNT8
+- client-fingerprint: chrome
+  name: 🇺🇸 US-05 7.8MB/s
+  network: xhttp
+  port: 4443
+  server: swo2.nexfile.net
+  sub_tag: S004-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  xhttp-opts:
+    mode: auto
+    path: /api/v1/sync/
+  xudp: true
+  packet-encoding: xudp
+  servername: swo2.nexfile.net
+- cipher: chacha20-ietf-poly1305
+  name: 🇿🇦 ZA-01 5.4MB/s
+  password: Xsy8Ox4yOV3xLlpxtjzs3X
+  port: 16233
+  server: 102.133.165.160
+  type: ss
+- name: 🇰🇷 KR-01 4.9MB/s
+  type: hysteria2
+  server: 152.69.231.175
+  port: 50160
+  password: 1beb216e3f60aea9555dae60d219a5ca
+  sni: 152.69.231.175
+  skip-cert-verify: true
+- name: 🇸🇬 SG-01 4.3MB/s
+  type: vless
+  server: 67.159.52.81
+  port: 443
+  udp: true
+  uuid: a16bd0e2-ff2e-4e4c-a955-0c684255a065
+  flow: xtls-rprx-vision
+  tls: true
+  servername: sg.fasti.win
+  reality-opts:
+    public-key: -YTGWg5DjsLDyaDfr1D83kiUK22LVcrK3yC53lqqigs
+    short-id: feedbacc
+  client-fingerprint: chrome
+- name: 🇺🇸 US-06 3.2MB/s
+  type: vless
+  server: panel.apexkey.store
+  port: 2053
+  udp: true
+  uuid: cdb7fa1d-6e7a-467c-da9c-da363c7bf779
+  tls: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: DEFJSLdILrvauMpwtpvFZddadpt3rNtv03Dui2EkmRk
+    short-id: '68'
+  client-fingerprint: chrome
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🔯 故障转移
+  - 🖐 手动选择
+  - 🇺🇸 美国
+  - 🇳🇱 荷兰
+  - 🇹🇷 土耳其
+  - 🇨🇭 CH
+  - 🇩🇪 德国
+  - 🇫🇷 法国
+  - 🇿🇦 ZA
+  - 🇰🇷 韩国
+  - 🇸🇬 新加坡
+  - DIRECT
+- name: ♻️ 自动选择
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies: &id001
+  - 🇺🇸 US-01 31.4MB/s
+  - 🇺🇸 US-02 27.5MB/s
+  - 🇹🇷 TR-01 24.0MB/s
+  - 🇺🇸 US-03 21.0MB/s
+  - 🇺🇸 US-04 19.9MB/s
+  - 🇳🇱 NL-01 11.6MB/s
+  - 🇨🇭 CH-01 10.6MB/s
+  - 🇳🇱 NL-02 10.4MB/s
+  - 🇩🇪 DE-01 9.4MB/s
+  - 🇫🇷 FR-01 8.9MB/s
+  - 🇺🇸 US-05 7.8MB/s
+  - 🇿🇦 ZA-01 5.4MB/s
+  - 🇰🇷 KR-01 4.9MB/s
+  - 🇸🇬 SG-01 4.3MB/s
+  - 🇺🇸 US-06 3.2MB/s
+- name: 🔯 故障转移
+  type: fallback
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies: *id001
+- name: 🖐 手动选择
+  type: select
+  proxies: *id001
+- name: 🇺🇸 美国
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - 🇺🇸 US-01 31.4MB/s
+  - 🇺🇸 US-02 27.5MB/s
+  - 🇺🇸 US-03 21.0MB/s
+  - 🇺🇸 US-04 19.9MB/s
+  - 🇺🇸 US-05 7.8MB/s
+  - 🇺🇸 US-06 3.2MB/s
+- name: 🇳🇱 荷兰
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - 🇳🇱 NL-01 11.6MB/s
+  - 🇳🇱 NL-02 10.4MB/s
+- name: 🇹🇷 土耳其
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - 🇹🇷 TR-01 24.0MB/s
+- name: 🇨🇭 CH
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - 🇨🇭 CH-01 10.6MB/s
+- name: 🇩🇪 德国
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - 🇩🇪 DE-01 9.4MB/s
+- name: 🇫🇷 法国
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - 🇫🇷 FR-01 8.9MB/s
+- name: 🇿🇦 ZA
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - 🇿🇦 ZA-01 5.4MB/s
+- name: 🇰🇷 韩国
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - 🇰🇷 KR-01 4.9MB/s
+- name: 🇸🇬 新加坡
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - 🇸🇬 SG-01 4.3MB/s
+rules:
+- GEOSITE,private,DIRECT
+- GEOIP,private,DIRECT,no-resolve
+- GEOSITE,category-ads-all,REJECT
+- GEOSITE,cn,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,🚀 节点选择
