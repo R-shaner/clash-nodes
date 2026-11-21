@@ -1,0 +1,117 @@
+# updated: 2026-11-21 17:27 UTC
+proxies:
+- type: vless
+  name: 🇺🇸 US-01 25.2MB/s
+  server: 45.138.100.248
+  port: 14430
+  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
+  udp: true
+  tls: false
+  servername: 45.138.100.248
+  sni: 45.138.100.248
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /vless
+- name: 🇺🇸 US-02 17.2MB/s
+  type: vless
+  server: 15.204.97.198
+  port: 23576
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  client-fingerprint: chrome
+- name: 🇫🇷 FR-01 14.7MB/s
+  type: vmess
+  server: 91.134.35.72
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: true
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  network: tcp
+  port: 1234
+  server: 162.19.204.71
+  servername: supervpn.super.com
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  name: 🇩🇪 DE-01 13.1MB/s
+- type: ss
+  name: 🇩🇪 DE-02 11.1MB/s
+  server: 8.220.81.25
+  port: 443
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  cipher: 2022-blake3-chacha20-poly1305
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: mobile.api.Event
+  name: 🇷🇺 RU-01 9.9MB/s
+  network: grpc
+  port: 443
+  server: 201.51.12.98
+  servername: vps3.nemnogogo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+- name: 🇮🇹 IT-01 5.9MB/s
+  type: ss
+  server: dash.chiex.ir
+  port: 1349
+  cipher: chacha20-ietf-poly1305
+  password: pFlEjR_10osoxyR2CnNIhUMpAy4CzfXr
+  udp: true
+- name: 🇸🇬 SG-01 5.8MB/s
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 13.212.78.215
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: 🇸🇬 SG-02 5.3MB/s
+  type: hysteria2
+  server: 47.129.241.99
+  port: 443
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  sni: 127.0.0.1
+  skip-cert-verify: true
+- name: 🇸🇬 SG-03 2.5MB/s
+  type: vless
+  server: 511.150333.xyz
+  port: 21004
+  udp: true
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  tls: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: 2df2bd9d8366cef1
+  client-fingerprint: chrome
+- type: ss
+  name: 🇩🇪 DE-03 0.7MB/s
+  server: 92.5.70.180
+  port: 59924
+  password: T/JBl9+ncYroIbDdDv16t8J6DqXsIAe0GbzWo6iDdhI=
+  cipher: 2022-blake3-chacha20-poly1305
+  udp: true
+  tls: false
+  skip-cert-verify: false

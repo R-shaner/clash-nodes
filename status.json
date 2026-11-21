@@ -1,0 +1,19 @@
+{
+  "updated": "2026-11-21 17:27 UTC",
+  "sources": 440,
+  "sources_with_nodes": 308,
+  "sources_alive": 168,
+  "parsed": 505651,
+  "after_dedupe": 1500,
+  "delay_ok": 15,
+  "final": 11,
+  "countries": {
+    "US": 2,
+    "FR": 1,
+    "DE": 3,
+    "RU": 1,
+    "IT": 1,
+    "SG": 3
+  },
+  "seconds": 163
+}
