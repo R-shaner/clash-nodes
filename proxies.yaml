@@ -1,0 +1,199 @@
+# updated: 2026-11-28 03:55 UTC
+proxies:
+- name: 🇺🇸 US-01 41.9MB/s
+  type: ss
+  server: 66.23.205.84
+  port: 17530
+  cipher: aes-128-gcm
+  password: Z0m3oFlLVtts6UvlKQzMXCIL9jFR70s3
+  udp: true
+- name: 🇺🇸 US-02 31.1MB/s
+  type: ss
+  server: 149.40.57.134
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 🇺🇸 US-03 30.9MB/s
+  type: vmess
+  server: 172.111.36.147
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: true
+- name: 🇺🇸 US-04 21.7MB/s
+  type: hysteria2
+  server: ledgerclient.newbuzideas.org
+  port: 443
+  password: b1490307-d693-4392-8f32-a3f7cc139202
+  sni: ledgerclient.newbuzideas.org
+- name: 🇬🇧 GB-01 12.7MB/s
+  type: ss
+  server: 38.114.120.221
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 🇸🇪 SE-01 10.7MB/s
+  type: vless
+  server: leviko-se4581.shopingggg.ir
+  port: 48115
+  udp: true
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
+  tls: true
+  servername: 138-124-86-230.sslip.io
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 138-124-86-230-sslip-io
+- name: 🇩🇪 DE-01 10.0MB/s
+  type: hysteria2
+  server: 2.26.93.169
+  port: 443
+  password: b1490307-d693-4392-8f32-a3f7cc139202
+  sni: statslabel.videostockmarket.org
+- name: 🇯🇵 JP-01 9.7MB/s
+  type: ss
+  server: 149.22.87.204
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: 🇵🇱 PL-01 9.3MB/s
+  type: hysteria2
+  server: 144.31.5.151
+  port: 443
+  password: b1490307-d693-4392-8f32-a3f7cc139202
+  sni: kiosklist.comparecarprices.org
+- name: 🇩🇪 DE-02 9.1MB/s
+  type: vless
+  server: 172.64.147.85
+  port: 80
+  uuid: 0991a0c4-0ee5-4213-af89-7ad589f853f3
+  udp: true
+  encryption: none
+  tls: false
+  servername: ''
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY?ed=2560
+    headers:
+      Host: elenaaaaaaaaaa.cloudns.pro
+- name: 🇵🇱 PL-02 8.8MB/s
+  type: vless
+  server: lesson1.schoolpizorbz.xyz
+  port: 443
+  udp: true
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: lesson1.schoolpizorbz.xyz
+  reality-opts:
+    public-key: AdOl7XVxVk4Yb_tBxjrG-FP5elV_V2MeI_6WVC4H41s
+    short-id: d14566fcec627162
+  client-fingerprint: firefox
+- name: 🇫🇮 FI-01 8.5MB/s
+  type: vless
+  server: 193.188.21.253
+  port: 10444
+  udp: true
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  flow: xtls-rprx-vision
+  tls: true
+  servername: video.yandex.ru
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  client-fingerprint: firefox
+- name: 🇯🇵 JP-02 8.4MB/s
+  type: vless
+  server: jpg1radio.jumpernode.site
+  port: 443
+  udp: true
+  uuid: f45ccbaa-521d-4d3a-a4e7-13a3094f2b90
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cdn.amazon.com
+  reality-opts:
+    public-key: dtNeCNIcRgs8_EKIJg_oTJEsiA8KBU-QaE1yVpkoX0I
+    short-id: 949ddd6bacbc
+  client-fingerprint: chrome
+- name: 🇩🇪 DE-03 8.4MB/s
+  type: vless
+  server: tether.dev
+  port: 443
+  udp: true
+  uuid: dd2525ab-e5b7-58c4-a9b4-511100000000
+  tls: true
+  servername: xtdp.akaram-5624-cba.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: xtdp.akaram-5624-cba.workers.dev
+- name: 🇫🇷 FR-01 5.2MB/s
+  type: vless
+  server: 108.158.198.2
+  port: 443
+  udp: true
+  uuid: 7a42d986-f0b8-46e7-82cf-9516e168a613
+  tls: true
+  servername: dkfsoyk9ju2as.cloudfront.net
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: dkfsoyk9ju2as.cloudfront.net
+- name: 🇰🇷 KR-01 5.0MB/s
+  type: hysteria2
+  server: 150-230-252-217.liao.kdns.fr
+  port: 50160
+  password: 9cfc9458e48c028ec03ff86ebc71c744
+  sni: 'off'
+  skip-cert-verify: true
+- name: 🇮🇳 IN-01 4.9MB/s
+  type: vless
+  server: 178.212.35.198
+  port: 443
+  udp: true
+  uuid: 6bdc8320-7eae-46fc-be08-f5f54e65dfc8
+  tls: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
+    short-id: 6bdc8320
+  client-fingerprint: firefox
+- name: 🇯🇵 JP-03 3.0MB/s
+  type: vless
+  server: 5.75.195.83
+  port: 56879
+  udp: true
+  uuid: dc156965-e152-4df6-9743-9c1f38d82cf3
+  tls: true
+  servername: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
+- name: 🇯🇵 JP-04 2.9MB/s
+  type: vless
+  server: 57.129.130.34
+  port: 52014
+  udp: true
+  uuid: 53367702-4b8d-431a-a193-34d7d057a065
+  tls: true
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
